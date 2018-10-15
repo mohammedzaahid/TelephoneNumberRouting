@@ -2,7 +2,7 @@
 PROJECT TITLE: Telephone Number Routing with Operators by Zaahid Mohammed
 
 GETTING STARTED
-Delivered to alaTest.com 
+Delivered via GitHub.
 Developed in python3 package.
 The application functions to route a telephone number with its cheapest operator. 
 
@@ -10,6 +10,13 @@ RUNNING THE APPLICATION:
 Extract the ‘TelephoneNumber_Router.zip’.
 Run phoneNum.py using python3.
 Install required packages; pandas, math, unittest.
+
+INPUT FORMAT FOR TELEPHONE NUMBERS:
+* Input can be in form of integer, example: 4673292929 OR in telephone format, example: +4673292929
+* Output will provide cheapest operator that will route telephone number, from given data in code. 
+* More operator lists can be added. ( Look for next subtitle) 
+* If telephone number does not exist in any operator provided, Output will depict so. 
+* Unit tests are provided for operator lists and prices. 
 
 
 MANIPULATING CODE FOR FUNCTIONS:
