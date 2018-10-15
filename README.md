@@ -27,7 +27,7 @@ Format for adding Operators and Price lists:
 ###dfN = pd.DataFrame({'Operator': [prefix, prefix, prefix,......], 'Cost': [price, price, price,......]})####
 ###dfsN = {'Operator X ': dfN}###
 
-Subsequently, these dataframes must be added in the unittest part of the code, which is after line 14. 
+Subsequently, these dataframes must be added in the unittest part of the code, which is after line 12. 
 
 ###expected_dfN = pd.DataFrame({'Operator': [prefix, prefix, prefix,......], 'Cost': [price, price, price,......]})####
 ###pd.testing.assert_frame_equal(my_dfN, expected_dfN)###
