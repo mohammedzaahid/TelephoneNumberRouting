@@ -49,7 +49,7 @@ if __name__ == '__main__':
     if len(f) == 0:												                    	#statement to find length of object f for no match case
         print("Telephone Number Not Found in Any Operator")
     try:
-        print("", f)												                    #Respective operator can be understood as f is dataframe containing operator details
+        print(f)												                    #Respective operator can be understood as f is dataframe containing operator details
         print("Minimum price is", float(g))     					                    #Print Final MINIMUM PRICE OF TELEPHONE NUMBER, as g, float because g can be null value
     except Exception as e:											                    #giving error case as No match again for try operator
         print("Not Routed")
