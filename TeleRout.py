@@ -23,7 +23,7 @@ class DFTests(unittest.TestCase):									#defining functions for unit tests to 
             print("UNIT TEST FAILED", e)							#print output as unit test failed with percentage amount of error
 
 
-def func2(dat):														
+def func2(dat):
     try:
         for key, value in dat.items():
             for name, values in value.iterrows():
@@ -41,7 +41,7 @@ def func2(dat):
 
         return a, key
     except Exception as e:
-        print("Not Found in "+key)
+        print("Not "+key)
 
 
 if __name__ == '__main__':
