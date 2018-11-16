@@ -11,7 +11,9 @@ Extract the ‘TelephoneNumber_Router.zip’.
 Run PhoneNum.py using python3.
 Install required packages; pandas, math, unittest.
 
-
+EXAMPLE: 
+The output for this program is given in form of a table pointing out the respective prices for all operators and then finally showing the minimum price of the telephone number that is routed.
+The user may identify which Operator has the minimum price from the table. 
 MANIPULATING CODE FOR FUNCTIONS:
 1. Adding more operators and price lists:
 """expected_dfN=pd.read_csv("filepath",sep='\t')"""
