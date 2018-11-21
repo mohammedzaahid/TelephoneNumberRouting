@@ -15,8 +15,8 @@ class DFTests(unittest.TestCase):									#defining functions for unit tests to 
             my_df2 = df2
             #expected_df1=pd.read_csv("filepath",sep='\t')			#command to import excel file as CSV with operators and price lists 
             #expected_df2=pd.read_csv("filepath",sep='\t')			#remove hashtag and paste path of file in place of filepath
-            expected_df1 = pd.DataFrame({'Operator': [1, 268, 46, 4620, 468, 4631, 4673, 46732], 'Cost': [0.9, 5.1, 0.17, 0.0, 0.15, 0.15, 0.9, 1.1]})	#expected_df1 defines data which is to be matched with data in body of code
-            expected_df2 = pd.DataFrame({'Operator': [1, 44, 46, 467, 48], 'Cost': [0.92, 0.5, 0.2, 1.3, 1.2]})
+            expected_df1 = pd.DataFrame({'Prefix': [1, 268, 46, 4620, 468, 4631, 4673, 46732], 'Cost': [0.9, 5.1, 0.17, 0.0, 0.15, 0.15, 0.9, 1.1]})	#expected_df1 defines data which is to be matched with data in body of code
+            expected_df2 = pd.DataFrame({'Prefix': [1, 44, 46, 467, 48], 'Cost': [0.92, 0.5, 0.2, 1.3, 1.2]})
             pd.testing.assert_frame_equal(my_df1, expected_df1)		#match dataframes in body of code with expected dataframes
             pd.testing.assert_frame_equal(my_df2, expected_df2)
         except Exception as e:										#handle case when data is not matched with data in body of code
@@ -27,15 +27,15 @@ def func2(dat):
     try:
         for key, value in dat.items():
             for name, values in value.iterrows():
-                if values.Operator == first_n_digits(num1, 1):       #checking and matching prefix value till 1st digit
+                if values.Prefix == first_n_digits(num1, 1):       #checking and matching prefix value till 1st digit
                     a = values.Cost
-                elif values.Operator == first_n_digits(num1, 2):     #checking and matching prefix value till 2nd digit
+                elif values.Prefix == first_n_digits(num1, 2):     #checking and matching prefix value till 2nd digit
                     a = values.Cost
-                elif values.Operator == first_n_digits(num1, 3):     #checking and matching prefix value till 3rd digit
+                elif values.Prefix == first_n_digits(num1, 3):     #checking and matching prefix value till 3rd digit
                     a = values.Cost
-                elif values.Operator == first_n_digits(num1, 4):     #checking and matching prefix value till 4th digit
+                elif values.Prefix == first_n_digits(num1, 4):     #checking and matching prefix value till 4th digit
                     a = values.Cost
-                elif values.Operator == first_n_digits(num1, 5):     #checking and matching prefix value till 5th digit
+                elif values.Prefix == first_n_digits(num1, 5):     #checking and matching prefix value till 5th digit
                     a = values.Cost
 
 
@@ -52,8 +52,8 @@ if __name__ == '__main__':
     else:
         num1 = num1
     num1 = int(num1)                                                #assigning num1 as integer for matching prefix
-    df1 = pd.DataFrame({'Operator': [1, 268, 46, 4620, 468, 4631, 4673, 46732], 'Cost': [0.9, 5.1, 0.17, 0.0, 0.15, 0.15, 0.9, 1.1]})       #assigned dataframes as Operators and Price Lists in pandas package
-    df2 = pd.DataFrame({'Operator': [1, 44, 46, 467, 48], 'Cost': [0.92, 0.5, 0.2, 1.3, 1.2]})
+    df1 = pd.DataFrame({'Prefix': [1, 268, 46, 4620, 468, 4631, 4673, 46732], 'Cost': [0.9, 5.1, 0.17, 0.0, 0.15, 0.15, 0.9, 1.1]})       #assigned dataframes as Prefixes and Price Lists in pandas package
+    df2 = pd.DataFrame({'Prefix': [1, 44, 46, 467, 48], 'Cost': [0.92, 0.5, 0.2, 1.3, 1.2]})
     dfs1 = {'Routed by Operator A': df1}                            #assigning names as per required output to dataframes to conduct tests
     dfs2 = {'Routed by Operator B': df2}
     DFTests1.setUp(df1, df2)                                        #calling DFTests function to perform test to match prefix in dataframes
