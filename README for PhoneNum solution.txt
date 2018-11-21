@@ -27,7 +27,7 @@ Also, the number of dataframes added have to be mentioned in line 43, as df3, an
 
 Subsequently, these dataframes must be added in the unittest part of the code, which is after line 19. 
 
-###expected_dfN = pd.DataFrame({'Price': [prefix, prefix, prefix,......], 'Cost-OperatorX': [price, price, price,......]})####
+###expected_dfN = pd.DataFrame({'Prefix': [prefix, prefix, prefix,......], 'Cost-OperatorX': [price, price, price,......]})####
 ###pd.testing.assert_frame_equal(my_dfN, expected_dfN)###
 
 This is for unittest to work, and check whether expected dfN(Prefix) is same as given dfN. 
